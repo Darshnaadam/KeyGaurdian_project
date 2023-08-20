@@ -4,7 +4,7 @@ import subprocess
 import os
 
 
-WINDOWS_PYTHON_INTERPRETER_PATH = os.path.expanduser("~/.wine/C:\Python311\python.exe")
+WINDOWS_PYTHON_INTERPRETER_PATH = os.path.expanduser("~/.wine/C:/Python311/python.exe")
 
 def get_arguments():
     parser = argparse.ArgumentParser(description='ZLogger v2.0')
